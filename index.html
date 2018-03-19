@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="assets/head/Tic-tac-toe.png" type="image/x-icon">
+    <title>Tic-tac-toe game</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='index.css' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body>
+    <table class="board">
+      <tr class="board__line board__line_bottom">
+        <td class="board__cell board__cell_right">
+          <i class="material-icons material-icons_X">clear</i>
+        </td>
+        <td class="board__cell board__cell_right">
+        </td>
+        <td class="board__cell">
+          <i class="material-icons material-icons_O">panorama_fish_eye</i>
+        </td>
+      </tr>
+
+      <tr class="board__line board__line_bottom">
+        <td class="board__cell board__cell_right"></td>
+        <td class="board__cell board__cell_right"></td>
+        <td class="board__cell"></td>
+      </tr>
+
+      <tr class="board__line">
+        <td class="board__cell board__cell_right board__cell_bottom"></td>
+        <td class="board__cell board__cell_right board__cell_bottom"></td>
+        <td class="board__cell board__cell_bottom"></td>
+      </tr>
+    </table>
+    <aside class="menu">
+      <div class="info">
+        <span>Сейчас ход<span>
+        <i class="material-icons material-icons_X info__icon info__icon_X">clear</i>
+      </div>
+      <button class="button button_start">
+        Начать Игру
+      </button>
+
+
+    </aside>
+    <script src="script.js"></script>
+  </body>
+</html>
