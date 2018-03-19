@@ -53,25 +53,25 @@ let game = () => {
               info.innerHTML = 'Сейчас ход '+ stroke_now
             }
             if(cell[i][0].outerText == cell[i][1].outerText && cell[i][0].outerText == cell[i][2].outerText && cell[i][0].outerText != "" && cell[i][1].outerText != "" && cell[i][2].outerText != "" ){
-              info.innerHTML = 'Победил' + cell[i][0].outerHTML + restartButton
+              info.innerHTML = 'Победил ' + cell[i][0].outerHTML + restartButton
               document.getElementsByClassName('button_restart')[0].style.visibility = "visible"
               check_end()
               document.getElementsByClassName('button_restart')[0].onclick = game
             }
             if(cell[0][j].outerText == cell[1][j].outerText && cell[0][j].outerText == cell[2][j].outerText && cell[0][j].outerText != "" && cell[1][j].outerText != "" && cell[2][j].outerText != ""){
-              info.innerHTML = 'Победил' + cell[0][j].outerHTML + restartButton
+              info.innerHTML = 'Победил ' + cell[0][j].outerHTML + restartButton
               document.getElementsByClassName('button_restart')[0].style.visibility = "visible"
               check_end()
               document.getElementsByClassName('button_restart')[0].onclick = game
             }
             if(cell[0][0].outerText == cell[1][1].outerText && cell[0][0].outerText == cell[2][2].outerText && cell[1][1].outerText != "" && cell[2][2].outerText != "" && cell[0][0].outerText != ""){
-              info.innerHTML = 'Победил' + cell[0][0].outerHTML + restartButton
+              info.innerHTML = 'Победил ' + cell[0][0].outerHTML + restartButton
               document.getElementsByClassName('button_restart')[0].style.visibility = "visible"
               check_end()
               document.getElementsByClassName('button_restart')[0].onclick = game
             }
             if(cell[0][2].outerText == cell[1][1].outerText != ""  && cell[0][2].outerText == cell[2][0].outerText && cell[0][2].outerText != "" && cell[1][1].outerText != "" && cell[2][0].outerText != ""){
-              info.innerHTML = 'Победил' + cell[2][0].outerHTML + restartButton
+              info.innerHTML = 'Победил ' + cell[2][0].outerHTML + restartButton
               document.getElementsByClassName('button_restart')[0].style.visibility = "visible"
               check_end()
               document.getElementsByClassName('button_restart')[0].onclick = game
