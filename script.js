@@ -13,7 +13,7 @@ let restartButton = '<button class="button button_restart"> Начать сна�
 let stroke_count = 0
 let stroke_x = '<i class="material-icons material-icons_X">clear</i>'
 let stroke_o = '<i class="material-icons material-icons_O">panorama_fish_eye</i>'
-let stroke_now = stroke_x
+let stroke_now
 
 let check_start = () =>{
   for(let i = 0; i < 3; i++){
@@ -32,6 +32,8 @@ let check_end = () =>{
 }
 
 let game = () => {
+    stroke_now = stroke_x
+    stroke_count = 0
     check_start ()
     info.innerHTML = `Сейчас ход ${stroke_now}`
     startButton.style.display = 'none'
@@ -51,6 +53,12 @@ let game = () => {
             } else {
               stroke_now = stroke_x
               info.innerHTML = 'Сейчас ход '+ stroke_now
+            }
+            if(stroke_count == 9){
+              info.innerHTML = 'Ничья!' + restartButton
+              document.getElementsByClassName('button_restart')[0].style.visibility = "visible"
+              check_end()
+              document.getElementsByClassName('button_restart')[0].onclick = game
             }
             if(cell[i][0].outerText == cell[i][1].outerText && cell[i][0].outerText == cell[i][2].outerText && cell[i][0].outerText != "" && cell[i][1].outerText != "" && cell[i][2].outerText != "" ){
               info.innerHTML = 'Победил ' + cell[i][0].outerHTML + restartButton
